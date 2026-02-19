@@ -175,7 +175,7 @@ if (shortForm && shortContent && shortSuccess) {
             alert("Bitte alle felder ausfüllen");
             return;
         }
-        fetch("http://127.0.0.1:8000/api/short/", {
+        fetch("/api/short/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
