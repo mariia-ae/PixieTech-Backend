@@ -130,3 +130,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'backend' ,'static'),
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+
+os.environ.setdefault("DGANGO_SUPERUSER_PASSWORD", "admin123456")

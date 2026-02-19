@@ -6,3 +6,8 @@ pip install -r requirements.txt
 cd BackendPixieTech
 python manage.py collectstatic --noinput
 python manage.py migrate
+
+python manage.py createsuperuser \
+--username admin \
+--email admin@example.com \
+--noinput || true
