@@ -46,6 +46,49 @@ def contact_api(request):
         status=201
     )
 
+import json
+from .models import ShortContact
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
+def short_contact(request):
+    if request.method != "POST":
+        return JsonResponse({"error": "Only POST allowed"}, status=405)
+    
+    try:
+        data=json.loads(request.body)
+    except:
+        return JsonResponse({"error": "Invalid JSON"}, status=400)
+    name = data.get("name")
+    email = data.get("email")
+    message = data.get("message")
+
+    if not name or not email or not message:
+        return JsonResponse({"error": "All fields required"}, status=400)
+    
+    obj = ShortContact.objects.create(
+        name=name,
+        email=email,
+        message=message
+    )
+    return JsonResponse(
+    {
+        "status": "ok",
+        "id":obj.id
+    }, status=201)
+
+from django.shortcuts import render
+
+def index_page(request):
+    return render(request, "index.html")
+def contact_page(request):
+    return render(request, "contact.html")
+def about_page(request):
+    return render(request, "about.html")
+def services_page(request):
+    return render(request, "services.html")
+def contact_form_page(request):
+    return render(request, "contact-form.html")
 
 # Create your views here.

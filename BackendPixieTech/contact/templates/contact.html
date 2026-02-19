@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | PixieTech</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'contact/style.css' %}">
+</head>
+<body class="page-secondary">
+    <header class="site-header">
+        <h1 class="Logo"><a href="{% url 'index' %}">PixieTech</a></h1>
+        <button class="burger" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">Über uns</a></li>
+                <li><a href="{% url 'services' %}">Dienstleistungen</a></li>
+                <li><a href="{% url 'contact' %}" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero hero-other">
+        <div class="hero-content">
+            <h2 class="secondary-titel">Kontakt</h2>
+        </div>
+    </section>
+    <div class="main-content">
+        <div class="container">
+            <main>
+                <section class="contact-intro">
+                    <p>
+                        Direkter Kontakt für Fragen, Support oder kurze Abstimmungen.
+                    </p>
+                </section>
+                <section class="contact-cards">
+                    <article class="contact-card">
+                        <h3>Allgemeine Anfragen</h3>
+                        <p>
+                            Für allgemeine Fragen, Kooperationen oder Rückfragen.
+                        </p>
+                        <a href="mailto:kontakt@pixietech.de" class="contact-link">
+                            kontakt@pixietech.de
+                        </a>
+                    </article>
+                    <article class="contact-card">
+                        <h3>Support</h3>
+                        <p>
+                            Bei technischen Fragen oder bestehenden Projekten.
+                        </p>
+                        <a href="mailto:support@pixietech.de" class="contact-link">
+                            support@pixietech.de
+                        </a>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-content" id="contactContent">
+                            <h3> Kurze Nachricht senden</h3>
+                            <p>
+                            Für kurze Fragen - kein Projektformular.
+                            </p>
+                            <form class="contact-form-card" id="contactShortForm">
+                                <input id="name" name="name" type="text" placeholder="Ihr Name" required>
+                                <input id="email" name="email" type="email" placeholder="Ihre E-Mail-Adresse" required>
+                                <textarea name="message" placeholder="Ihre Nachricht" rows="3" required></textarea>
+                                <button type="submit" class="btn-primary btn-pink">
+                                Nachricht senden
+                                </button>
+                            </form>
+                        </div>
+                        <div class="contact-success" id="contactSuccess">
+                            <h4>Vielen Dank!</h4>
+                            <p>
+                                Ihre Nachricht wurde gesendet.
+                                Wir melden uns zeitnah bei Ihnen
+                            </p>
+                        </div>
+                    </article>
+                </section>
+                <div class="divider"></div>
+                <section class="secondary-cta">
+                    <h3>Sie haben ein konkretes Projekt im Kopf?</h3>
+                    <p>
+                        Nutzen Sie unser Projektformular für eine strukturierte Anfrage.
+                    </p>
+                    <a href="{% url 'contact_form' %}" class="btn-primary btn-pink">
+                        Projekt besprechen
+                    </a>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mariia's Webseite</p>
+    </footer>
+<script src="{% static 'contact/script.js' %}" defer></script>
+</body>
+</html>
+

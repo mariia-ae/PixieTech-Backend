@@ -24,10 +24,12 @@ def newsletter_subscribe(request):
             {"error": "Email is required"},
             status=400
         )
-    subscriber = NewsletterSubscriber.objects.create(email=email)
+    subscriber, created = NewsletterSubscriber.objects.get_or_create(email=email)
 
     return JsonResponse(
-        {"status": "ok", "id": subscriber.id},
+        {"status": "ok", 
+         "created": created,
+         "id": subscriber.id},
         status=201
     )
 

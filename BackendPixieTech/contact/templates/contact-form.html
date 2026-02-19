@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt-Form | PixieTech</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'contact/style.css' %}">
+</head>
+<body class="page-secondary page2"> 
+    <header class="site-header">
+        <h1 class="Logo"><a href="{% url 'index' %}">PixieTech</a></h1>
+        <button class="burger" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">Über uns</a></li>
+                <li><a href="{% url 'services' %}">Dienstleistungen</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <main class="form-page">
+                <section class="contact-section">
+                    <div class="form-hero">
+                        <h2>Projektanfrage</h2>
+                        <p>Beshreiben Sie uns kurz ihre Anliegen.</p>
+                        <p> Wir melden uns zeitnah bei Ihnen zurück.</p>
+                    </div>
+                    <form class="contact-form" id="contactForm" onsubmit="return false;">
+                        <label>
+                            Vorname *
+                            <input id="first-name" type="text" name="first-name" required>
+                        </label>
+                        <label>
+                            Nachname *
+                            <input id="last-name" type="text" name='last-name' required>
+                        </label>
+                        <label >
+                            Firma / Selbstständig 
+                            <span class="optional">(optional)</span>
+                            <input type="text" name="company">
+                        </label>
+                        <label>
+                            E-Mail *
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>
+                            Telefon
+                            <span class="optional">(optional)</span>
+                            <input type="tel">
+                        </label>
+                        <fieldset>
+                            <legend>Art des Projektes *</legend>
+                            <label> 
+                                <input type="radio" name="projekt-type" value="web" required>
+                                Webseite 
+                            </label>
+                            <label>
+                                <input type="radio" name="projekt-type" value="app">
+                                App
+                            </label>
+                            <label>
+                                <input type="radio" name="projekt-type" value="improvement">
+                                Verbesserung bestehende Web-/App-Lösungen
+                            </label>
+                            <label>
+                                <input type="radio" name="projekt-type" value="other">
+                                Sonstiges
+                            </label>
+                        </fieldset>
+                        <label>
+                            Nachricht (optional)
+                            <textarea name="message" rows="5"></textarea>
+                        </label>
+                        <button type="submit" class="btn-primary" id="contactBtn">
+                            Anfrage absenden
+                        </button>
+                    </form>
+                    <div class="form-success">
+                        <h3> Vielen Dank für Ihre Anfrage</h3>
+                        <p>Wir haben ihre Nachricht erhalten und melden uns
+                            in der Regel innerhalb von 1-2 Werktagen bei Ihnen.
+                        </p>
+                        <div class="success-actions">
+                            <a href="{% url 'contact_form' %}" class="btn-primary btn-pink">
+                            Projekt starten
+                            </a>
+                            <a href="{% url 'index' %}" class="btn-primary btn-pink" >
+                            Zur Startseite
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mariia's Webseite</p>
+    </footer>
+<script src="{% static 'contact/script.js' %}" defer></script>
+</body>
+</html>

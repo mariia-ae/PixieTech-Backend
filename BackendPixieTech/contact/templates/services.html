@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dienstleistungen | PixieTech</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'contact/style.css' %}">
+</head>
+<body class="page-secondary"> 
+    <header class="site-header">
+        <h1 class="Logo"><a href="{% url 'index' %}">PixieTech</a></h1>
+        <button class="burger" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">Über uns</a></li>
+                <li><a href="{% url 'services' %}" class="active">Dienstleistungen</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero hero-other">
+        <div class="hero-content">
+            <h2 class="secondary-titel">Dienstleistungen</h2>
+        </div>
+    </section>
+    <div class="main-content">
+        <div class="container">
+            <main>
+                <section class="services-intro">
+                    <p>
+                        Klare, praxisnahe Lösungen für Web- und App-Projekte - 
+                        strukturiert, verständlich und wartbar.
+                    </p>
+                </section>
+                <section class="services">
+                    <h2>Unsere Leistungen</h2>
+                    <div class="services-cards">
+                        <article class="services-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 4h8v4h-8v-4z"/>
+                                </svg>
+                            </div>
+                            <h3>Webentwicklung</h3>
+                            <p class="service-short">
+                                Moderne, responsive Webseiten.
+                            </p>
+                            <p class="service-full">
+                                Entwicklung klar strukturierter Webseiten mit sauberem
+                                HTML, CSS und JavaScript - wartbar, performant und 
+                                benutzerfreundlich
+                            </p>
+                        </article>
+                        <article class="services-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19.14 12.94a7.49 7.49 0 000-1.88l2.03-1.58-2-3.46-2.39.96a7.28 7.28 0 00-1.63-.94L14.5 2h-5l-.65 2.04a7.28 7.28 0 00-1.63.94l-2.39-.96-2 3.46 2.03 1.58a7.49 7.49 0 000 1.88L.84 14.52l2 3.46 2.39-.96c.5.38 1.04.7 1.63.94L9.5 22h5l.65-2.04c.59-.24 1.13-.56 1.63-.94l2.39.96 2-3.46-2.03-1.58zM12 15.5A3.5 3.5 0 1112 8a3.5 3.5 0 010 7.5z"/>
+                                </svg>
+                            </div>
+                            <h3>Web-Apps & Tools</h3>
+                            <p class="service-short">
+                                Individuelle Web-Anwendungen.
+                            </p>
+                            <p class="service-full">
+                                Entwicklung kleiner Web-Apps und interner Tools,
+                                die reale Prozesse vereinfachen und effizient unterstützen.
+                            </p>
+                        </article>
+                        <article class="services-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 3a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3zm0 8c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4z"/>
+                                </svg>
+                            </div>
+                            <h3>Optimierung & Struktur</h3>
+                            <p class="service-short">
+                                Bestehende Projekte verbessern.
+                            </p>
+                            <p class="service-full">
+                                Analyse und Optimierung von Code-Struktur,
+                                Nutzerführung und technischer Umsetzung bestehender Projekte.
+                            </p>
+                        </article>
+                        <article class="services-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M2 3h20v14H6l-4 4V3zm4 6h12v2H6V9zm0-4h12v2H6V5z"/>
+                                </svg>
+                            </div>
+                            <h3>Beratung & Support</h3>
+                            <p class="service-short">
+                                Verständliche technische Beratung.
+                            </p>
+                            <p class="service-full">
+                                Pesönliche Beratung, technische Unterstützung
+                                und Begleitung während und nach dem Projekt.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="divider"></div>
+                </section>
+                <section class="secondary-cta">
+                    <h3>Sie planen ein Projekt?</h3>
+                    <p>
+                        Nutzen Sie unser Projektformular für eine strukturierte Anfrage
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mariia's Webseite</p>
+    </footer>
+<script src="{% static 'contact/script.js' %}"></script>
+</body>
+</html>
