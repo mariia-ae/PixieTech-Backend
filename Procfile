@@ -1,0 +1,1 @@
+web: cd BackendPixieTech && gunicorn backend.wsgi
