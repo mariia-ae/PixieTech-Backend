@@ -63,7 +63,7 @@ if (form && successMessage) {
         const formData ={
             name:`${firstname} ${lastname}`,
             email: email,
-            phone: phoneInput ? phoneInput.value.trim(): "";
+            phone: phoneInput ? phoneInput.value.trim(): "",
             project_type: project_type,
             message: message
         };
