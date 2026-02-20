@@ -30,7 +30,7 @@ Datenbank:
 - SQLite/postgreSQL
 
 Deployment:
--Render
+- Render
 
 ## Architektur
 Die Anwendung basiert auf dem Django Framework.
