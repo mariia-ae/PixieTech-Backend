@@ -15,22 +15,29 @@ https://pixietech-fullstack.onrender.com/
 - Administrationsbereich zur Verwaltung der Anfragen und -nachrichten
 
 ## Technologien
-Backend:
+# Backend:
 - Python
 - Django 4.2.16
 - Django Admin
 - Dganjo Forms
-Frontend:
+# Frontend:
 - HTML
 - CSS
 - JavaScript
-Datenbank:
+# Datenbank:
 - SQLite/postgreSQL
-Deployment:
+# Deployment:
 -Render
 
+## Architektur
+Die Anwendung basiert auf dem Django Framework.
+- Frontend: HTML, CSS, JavaScript
+- Backend: Django(python)
+- Datenbank: Speicherung der Benutzerdaten über Django Models
+- Deployment: Render
+
 ## Projektziel
-Dieses Projekt wurde im Rahmen meines Selbststudiums entwickelt,
+Dieses Projekt wurde im Rahmen meiner Umschulung zur Fachinformatikerin für Anwendungsentwicklung entwickelt,
 um praktisches Erfahrungen in der Webentwicklung mit Django zu sammeln.
 Der Fokus lag auf der Entwicklung einer vollstangigen Webanwendung mit Backend,
 Frontend, Datenbank und Deployment.
@@ -46,9 +53,13 @@ Der Django-Adminbereich ermöglich die Verwaltung von:
 - Erweiterung der Funktionalität
 - Optimierung der Benutzerfreundlichkeit
 
+## Screenshots
+-
+-
+
 ## Autorin
 Dieses Projekt wurde von mir im Rahmen meiner Umschulung zur Fachinformatikerin 
 für Anwendungsentwicklung entwickelt, mit dem Ziel, praktische Erfahrungen in der Fill-Stack-Webentwicklung zu sammeln.
 
 ## Status 
-aktiv entwickelt und online vwerfügbar
+Aktiv entwickelt und online vwerfügbar.
