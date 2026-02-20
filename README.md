@@ -14,20 +14,20 @@ https://pixietech-fullstack.onrender.com/
 - Administrationsbereich zur Datenbank
 - Administrationsbereich zur Verwaltung der Anfragen und -nachrichten
 
-  ## Technologien
-  Backend:
-  - Python
-  - Django 4.2.16
-  - Django Admin
-  - Dganjo Forms
-  Frontend:
-  - HTML
-  - CSS
-  - JavaScript
-  Datenbank:
-  - SQLite/postgreSQL
-  Deployment:
-  -Render
+## Technologien
+Backend:
+- Python
+- Django 4.2.16
+- Django Admin
+- Dganjo Forms
+Frontend:
+- HTML
+- CSS
+- JavaScript
+Datenbank:
+- SQLite/postgreSQL
+Deployment:
+-Render
 
 ## Projektziel
 Dieses Projekt wurde im Rahmen meines Selbststudiums entwickelt,
